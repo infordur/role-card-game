@@ -1,0 +1,132 @@
+[
+    {
+        "_id": "06cebcc9-5caf-4c33-bcb6-00824373e31c",
+        "name": "Limo",
+        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo lacinia enim, euismod ullamcorper ex tincidunt nec. Proin tempus at orci at vestibulum. Nunc in lacinia odio, quis cursus lacus",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo lacinia enim, euismod ullamcorper ex tincidunt nec. Proin tempus at orci at vestibulum. Nunc in lacinia odio, quis cursus lacus. Proin efficitur ipsum tortor, in imperdiet nulla eleifend nec. Morbi et nunc rhoncus, pulvinar magna ut, tempus nunc. Ut elementum sapien ut elit aliquet lacinia. In interdum quam vel tellus lobortis, non volutpat dolor mollis. Cras tellus velit, porttitor ut justo vitae, egestas semper metus. Aenean mollis tempor orci, vitae rhoncus nibh bibendum at. Sed porta odio dui, sed aliquet augue rhoncus vel. Ut aliquam augue in velit imperdiet pharetra. In pharetra lectus eu odio tincidunt suscipit. Quisque id consectetur lacus. Praesent ut augue ac augue mollis posuere. Donec eget congue tortor.",
+        "image": "https://randomwordgenerator.com/img/picture-generator/53e0d54a4f51ae14f1dc8460962e33791c3ad6e04e50744172277fd7954ccc_640.jpg",
+        "rank": "78740d48-c98b-4eb7-aa1d-77eb3c56240c",
+        "level": 1,
+        "minlevel": 1,
+        "maxlevel": 10,
+        "base_stats": {
+            "str":  1,
+            "dex": 1,
+            "agi": 1,
+            "luk": 1,
+            "hp": 50
+        },
+        "stats_mult": {
+            "str": 1.6,
+            "dex": 1.75,
+            "agi": 1.9,
+            "luk": 1,
+            "hp": 2
+        },
+        "dice": "1d6"
+    },
+    {
+        "_id": "5b0b53d2-396b-412a-aae2-0fd055760804",
+        "name": "Soldado Esqueleto",
+        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo lacinia enim, euismod ullamcorper ex tincidunt nec. Proin tempus at orci at vestibulum. Nunc in lacinia odio, quis cursus lacus",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo lacinia enim, euismod ullamcorper ex tincidunt nec. Proin tempus at orci at vestibulum. Nunc in lacinia odio, quis cursus lacus. Proin efficitur ipsum tortor, in imperdiet nulla eleifend nec. Morbi et nunc rhoncus, pulvinar magna ut, tempus nunc. Ut elementum sapien ut elit aliquet lacinia. In interdum quam vel tellus lobortis, non volutpat dolor mollis. Cras tellus velit, porttitor ut justo vitae, egestas semper metus. Aenean mollis tempor orci, vitae rhoncus nibh bibendum at. Sed porta odio dui, sed aliquet augue rhoncus vel. Ut aliquam augue in velit imperdiet pharetra. In pharetra lectus eu odio tincidunt suscipit. Quisque id consectetur lacus. Praesent ut augue ac augue mollis posuere. Donec eget congue tortor.",
+        "image": "https://randomwordgenerator.com/img/picture-generator/53e0d54a4f51ae14f1dc8460962e33791c3ad6e04e50744172277fd7954ccc_640.jpg",
+        "rank": "78740d48-c98b-4eb7-aa1d-77eb3c56240c",
+        "level": 1,
+        "minlevel": 5,
+        "maxlevel": 20,
+        "base_stats": {
+            "str":  3,
+            "dex": 3,
+            "agi": 1,
+            "luk": 1.5,
+            "hp": 100
+        },
+        "stats_mult": {
+            "str": 2.2,
+            "dex": 1.82,
+            "agi": 1.5,
+            "luk": 1.3,
+            "hp": 2.4
+        },
+        "dice": "1d8"
+    },
+    {
+        "_id": "b851cf29-a00e-4edf-858b-93fb361a47c6",
+        "name": "Goblin",
+        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo lacinia enim, euismod ullamcorper ex tincidunt nec. Proin tempus at orci at vestibulum. Nunc in lacinia odio, quis cursus lacus",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo lacinia enim, euismod ullamcorper ex tincidunt nec. Proin tempus at orci at vestibulum. Nunc in lacinia odio, quis cursus lacus. Proin efficitur ipsum tortor, in imperdiet nulla eleifend nec. Morbi et nunc rhoncus, pulvinar magna ut, tempus nunc. Ut elementum sapien ut elit aliquet lacinia. In interdum quam vel tellus lobortis, non volutpat dolor mollis. Cras tellus velit, porttitor ut justo vitae, egestas semper metus. Aenean mollis tempor orci, vitae rhoncus nibh bibendum at. Sed porta odio dui, sed aliquet augue rhoncus vel. Ut aliquam augue in velit imperdiet pharetra. In pharetra lectus eu odio tincidunt suscipit. Quisque id consectetur lacus. Praesent ut augue ac augue mollis posuere. Donec eget congue tortor.",
+        "image": "https://randomwordgenerator.com/img/picture-generator/53e0d54a4f51ae14f1dc8460962e33791c3ad6e04e50744172277fd7954ccc_640.jpg",
+        "rank": "78740d48-c98b-4eb7-aa1d-77eb3c56240c",
+        "level": 1,
+        "minlevel": 5,
+        "maxlevel": 10,
+        "base_stats": {
+            "str":  2,
+            "dex": 4,
+            "agi": 4,
+            "luk": 1,
+            "hp": 65
+        },
+        "stats_mult": {
+            "str": 1.8,
+            "dex": 2.23,
+            "agi": 1.9,
+            "luk": 1.2,
+            "hp": 2.2
+        },
+        "dice": "1d6"
+    },
+    {
+        "_id": "1f06027b-8431-41ea-b4aa-7054a69c26b4",
+        "name": "Rata",
+        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo lacinia enim, euismod ullamcorper ex tincidunt nec. Proin tempus at orci at vestibulum. Nunc in lacinia odio, quis cursus lacus",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo lacinia enim, euismod ullamcorper ex tincidunt nec. Proin tempus at orci at vestibulum. Nunc in lacinia odio, quis cursus lacus. Proin efficitur ipsum tortor, in imperdiet nulla eleifend nec. Morbi et nunc rhoncus, pulvinar magna ut, tempus nunc. Ut elementum sapien ut elit aliquet lacinia. In interdum quam vel tellus lobortis, non volutpat dolor mollis. Cras tellus velit, porttitor ut justo vitae, egestas semper metus. Aenean mollis tempor orci, vitae rhoncus nibh bibendum at. Sed porta odio dui, sed aliquet augue rhoncus vel. Ut aliquam augue in velit imperdiet pharetra. In pharetra lectus eu odio tincidunt suscipit. Quisque id consectetur lacus. Praesent ut augue ac augue mollis posuere. Donec eget congue tortor.",
+        "image": "https://randomwordgenerator.com/img/picture-generator/53e0d54a4f51ae14f1dc8460962e33791c3ad6e04e50744172277fd7954ccc_640.jpg",
+        "rank": "78740d48-c98b-4eb7-aa1d-77eb3c56240c",
+        "level": 1,
+        "minlevel": 1,
+        "maxlevel": 5,
+        "base_stats": {
+            "str":  1,
+            "dex": 1,
+            "agi": 2,
+            "luk": 1,
+            "hp": 30
+        },
+        "stats_mult": {
+            "str": 1,
+            "dex": 1,
+            "agi": 2,
+            "luk": 1.1,
+            "hp": 1.6
+        },
+        "dice": "1d6"
+    },
+    {
+        "_id": "7e3bde92-e8c7-47d5-8caf-a82cf1bea8d8",
+        "name": "Troll",
+        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo lacinia enim, euismod ullamcorper ex tincidunt nec. Proin tempus at orci at vestibulum. Nunc in lacinia odio, quis cursus lacus",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo lacinia enim, euismod ullamcorper ex tincidunt nec. Proin tempus at orci at vestibulum. Nunc in lacinia odio, quis cursus lacus. Proin efficitur ipsum tortor, in imperdiet nulla eleifend nec. Morbi et nunc rhoncus, pulvinar magna ut, tempus nunc. Ut elementum sapien ut elit aliquet lacinia. In interdum quam vel tellus lobortis, non volutpat dolor mollis. Cras tellus velit, porttitor ut justo vitae, egestas semper metus. Aenean mollis tempor orci, vitae rhoncus nibh bibendum at. Sed porta odio dui, sed aliquet augue rhoncus vel. Ut aliquam augue in velit imperdiet pharetra. In pharetra lectus eu odio tincidunt suscipit. Quisque id consectetur lacus. Praesent ut augue ac augue mollis posuere. Donec eget congue tortor.",
+        "image": "https://randomwordgenerator.com/img/picture-generator/53e0d54a4f51ae14f1dc8460962e33791c3ad6e04e50744172277fd7954ccc_640.jpg",
+        "rank": "78740d48-c98b-4eb7-aa1d-77eb3c56240c",
+        "level": 1,
+        "minlevel": 20,
+        "maxlevel": 50,
+        "base_stats": {
+            "str":  22,
+            "dex": 17,
+            "agi": 15,
+            "luk": 6,
+            "hp": 220
+        },
+        "stats_mult": {
+            "str": 2,
+            "dex": 1.3,
+            "agi": 2,
+            "luk": 1.1,
+            "hp": 3
+        },
+        "dice": "1d6"
+    }
+]

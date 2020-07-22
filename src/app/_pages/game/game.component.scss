@@ -1,0 +1,129 @@
+@import "../../../styles.scss";
+
+
+// Game Card
+.game-card-container {
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #171314;
+
+    .game-card-border {
+        box-shadow: 0 0 0 2px #171314, 0 0 0 5px #d9c28c, -3px 3px 2px 5px #171314;
+    }
+
+    .card-background {
+        background-color: #171314;
+    }
+
+    .card-frame {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border-bottom-left-radius: 8%;
+        border-bottom-right-radius: 8%;
+
+        .game-card-header {
+            border: 2px solid #000;
+            border-radius: 18px/40px;
+            background-color: #C9D8D1;
+        }
+
+        .game-card-image {
+            background-size: cover;
+            background-color: #fff;
+        }
+
+        .description {
+            background-color:#C9D8D1;
+        }
+
+    }
+
+}
+
+
+
+
+
+.statDivChar,
+.statDivMonster {
+    padding-left: 0;
+    padding-right: 3rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    opacity: 1;
+    transition: opacity .6s ease-in-out;
+}
+
+// Fade-In Effect For Image
+.fadeInOut {
+    -moz-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    transition: opacity 2s ease-out;
+    opacity: 0;
+}
+
+
+// Progress Bars
+.hp {
+    background-color: $red2-dark-gradient;
+    color: #FFF;
+    transition: background-color 1s ease-in,width 1.5s ease-in-out;
+}
+
+.str {
+    background-color: $yellow2-dark-gradient;
+    transition: background-color 1s ease-in,width 1.5s ease-in-out;
+}
+
+.dex {
+    background-color: $blue2-dark-gradient;
+    transition: background-color 1s ease-in,width 1.5s ease-in-out;
+}
+
+.agi {
+    background-color: $green2-dark-gradient;
+    transition: background-color 1s ease-in,width 1.5s ease-in-out;
+}
+
+.luk {
+    background-color: $green1-dark-gradient;
+    transition: background-color 1s ease-in,width 1.5s ease-in-out;
+}
+
+// Perspective only for desktops
+@media only screen and (min-width: 992px) {
+    // StatDivChar
+    .statDivChar {
+        // perspective: 400px; // Increases Effect
+        margin: auto 0;
+        width: 37em;
+    }
+
+    // .statDivChar:hover .inner {
+    //     transform: rotate(0);
+    // }
+
+    .statDivChar .inner {
+        transition: .3s;
+        // transform: rotateY(30deg);
+    }
+
+
+    // StatDivMonster
+    .StatDivMonster {
+        // perspective: 400px; // Increases Effect
+        margin: auto 0;
+        width: 37em;
+    }
+
+    // .StatDivMonster:hover .inner {
+    //     transform: rotate(0);
+    // }
+
+    .StatDivMonster .inner {
+        transition: .3s;
+        // transform: rotateY(-30deg);
+    }
+
+}

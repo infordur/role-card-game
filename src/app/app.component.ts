@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MonsterService } from './_services/monster.service';
+import { DeckService } from './_services/deck.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'rol-game';
+    title = 'rol-game';
+
+
+    constructor() {
+        // this.deckService.generateDeck();
+    }
+
+
 }

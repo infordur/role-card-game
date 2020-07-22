@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-12">
+            <h1 class="text-center font-40">Choose a Character</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4" *ngFor="let char of characters">
+            <div (click)="selectCharacter(char)" class="card card-style preload-img" [style.background-image]="'url('+char.image+')'" style="height: 55vh;">
+                <div class="card-bottom ml-3">
+                    <h1 class="font-40 line-height-xl pb-2">{{char.name}}</h1>
+                    <p>
+                        {{char.short_description}}
+                    </p>
+                </div>
+                <div class="card-overlay bg-gradient-fade"></div>
+            </div>
+        </div>
+    </div>
+</div>

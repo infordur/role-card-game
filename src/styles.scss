@@ -1,1 +1,2339 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Mixins
+
+@mixin HEXtoRGBA ($property, $color, $opacity: 1) {
+  #{$property}: rgba($color, $opacity)
+}
+
+
+// Colors
+$highlightColorCode: #009fdf;
+
+$none: none;
+$red1: #D8334A;
+$red2: #ED5565;
+$orange: #FC6E51;
+$yellow1: #FFCE54;
+$yellow2: #E8CE4D;
+$green1: #A0D468;
+$green2: #2ECC71;
+$mint: #48CFAD;
+$teal: #A0CECB;
+$aqua: #4FC1E9;
+$blue1: #4FC1E9;
+$blue2: #5D9CEC;
+$magenta1: #AC92EC;
+$magenta2: #8067B7;
+$pink1: #EC87C0;
+$pink2: #fa6a8e;
+$brown1: #BAA286;
+$brown2: #8E8271;
+$gray1: #F5F7FA;
+$gray2: #CCD1D9;
+$dark1: #656D78;
+$dark2: #3C3B3D;
+
+// Dark Colors
+$red1-dark: #BF263C;
+$red2-dark: #DA4453;
+$orange-dark: #E9573F;
+$yellow1-dark: #F6BB42;
+$yellow2-dark: #E0C341;
+$green1-dark: #8CC152;
+$green2-dark: #2ABA66;
+$mint-dark: #37BC9B;
+$teal-dark: #7DB1B1;
+$aqua-dark: #3BAFDA;
+$blue1-dark: #3BAFDA;
+$blue2-dark: #4A89DC;
+$magenta1-dark: #967ADC;
+$magenta2-dark: #6A50A7;
+$pink1-dark: #D770AD;
+$pink2-dark: #fb3365;
+$brown1-dark: #AA8E69;
+$brown2-dark: #7B7163;
+$gray1-dark: #E6E9ED;
+$gray2-dark: #AAB2BD;
+$dark1-dark: #434A54;
+$dark2-dark: #323133;
+
+
+// Dark Colors Gradient
+
+$red1-dark-gradient: #9d0f23;
+$red2-dark-gradient: #a71222;
+$orange-dark-gradient: #ce3319;
+$yellow1-dark-gradient: #e6a00f;
+$yellow2-dark-gradient: #dbb50c;
+$green1-dark-gradient: #5ba30b;
+$green2-dark-gradient: #0da24b;
+$mint-dark-gradient: #0fa781;
+$teal-dark-gradient: #158383;
+$aqua-dark-gradient: #0a8ab9;
+$blue1-dark-gradient: #0b769d;
+$blue2-dark-gradient: #1a64c6;
+$magenta1-dark-gradient: #704dc9;
+$magenta2-dark-gradient: #4e3190;
+$pink1-dark-gradient: #c73c8e;
+$pink2-dark-gradient: #d30e3f;
+$brown1-dark-gradient: #896b43;
+$brown2-dark-gradient: #584934;
+$gray1-dark-gradient: #c2c5c9;
+$gray2-dark-gradient: #88919d;
+$dark1-dark-gradient: #242b34;
+$dark2-dark-gradient: #1c191f;
+
+
+
+// Social Colors
+$facebook: #3b5998;
+$linkedin: #0077B5;
+$twitter: #4099ff;
+$google: #d34836;
+$whatsapp: #34AF23;
+$pinterest: #C92228;
+$sms: #27ae60;
+$mail: #3498db;
+$dribbble: #EA4C89;
+$phone: #27ae60;
+$skype: #12A5F4;
+$instagram: #e1306c;
+
+
+
+.color-highlight{
+  color: $highlightColorCode !important;
+}
+.bg-highlight{
+  background-color: $highlightColorCode !important;
+}
+
+.footer-bar-1 .active-nav *,
+.footer-bar-3 .active-nav i {
+  color: $highlightColorCode !important
+}
+
+.footer-bar-2 strong,
+.footer-bar-4 strong,
+.footer-bar-5 strong {
+  background-color: $highlightColorCode !important;
+  color:#FFF;
+}
+
+.border-highlight{
+  border-color: $highlightColorCode !important
+}
+
+
+
+// Dark
+[data-feather-bg="red1-dark"] svg{
+  fill: $red1-dark !important;
+}
+
+[data-feather-bg="red2-dark"] svg{
+  fill: $red2-dark !important;
+}
+
+[data-feather-bg="orange-dark"] svg{
+  fill: $orange-dark !important;
+}
+
+[data-feather-bg="yellow1-dark"] svg{
+  fill: $yellow1-dark !important;
+}
+
+[data-feather-bg="yellow2-dark"] svg{
+  fill: $yellow2-dark !important;
+}
+
+[data-feather-bg="green1-dark"] svg{
+  fill: $green1-dark !important;
+}
+
+[data-feather-bg="green2-dark"] svg{
+  fill: $green2-dark !important;
+}
+
+[data-feather-bg="mint-dark"] svg{
+  fill: $mint-dark !important;
+}
+
+[data-feather-bg="teal-dark"] svg{
+  fill: $teal-dark !important;
+}
+
+[data-feather-bg="aqua-dark"] svg{
+  fill: $aqua-dark !important;
+}
+
+[data-feather-bg="blue1-dark"] svg{
+  fill: $blue1-dark !important;
+}
+
+[data-feather-bg="blue2-dark"] svg{
+  fill: $blue2-dark !important;
+}
+
+[data-feather-bg="magenta1-dark"] svg{
+  fill: $magenta1-dark !important;
+}
+
+[data-feather-bg="magenta2-dark"] svg{
+  fill: $magenta2-dark !important;
+}
+
+[data-feather-bg="pink1-dark"] svg{
+  fill: $pink1-dark !important;
+}
+
+[data-feather-bg="pink2-dark"] svg{
+  fill: $pink2-dark !important;
+}
+
+[data-feather-bg="brown1-dark"] svg{
+  fill: $brown1-dark !important;
+}
+
+[data-feather-bg="brown2-dark"] svg{
+  fill: $brown2-dark !important;
+}
+
+[data-feather-bg="gray1-dark"] svg{
+  fill: $gray1-dark !important;
+}
+
+[data-feather-bg="gray2-dark"] svg{
+  fill: $gray2-dark !important;
+}
+
+[data-feather-bg="dark1-dark"] svg{
+  fill: $dark1-dark !important;
+}
+
+[data-feather-bg="dark2-dark"] svg{
+  fill: $dark2-dark !important;
+}
+
+// Light
+
+[data-feather-bg="red1-light"] svg{
+  fill: $red1 !important;
+}
+
+[data-feather-bg="red2-light"] svg{
+  fill: $red2 !important;
+}
+
+[data-feather-bg="orange-light"] svg{
+  fill: $orange !important;
+}
+
+[data-feather-bg="yellow1-light"] svg{
+  fill: $yellow1 !important;
+}
+
+[data-feather-bg="yellow2-light"] svg{
+  fill: $yellow2 !important;
+}
+
+[data-feather-bg="green1-light"] svg{
+  fill: $green1 !important;
+}
+
+[data-feather-bg="green2-light"] svg{
+  fill: $green2 !important;
+}
+
+[data-feather-bg="mint-light"] svg{
+  fill: $mint !important;
+}
+
+[data-feather-bg="teal-light"] svg{
+  fill: $teal !important;
+}
+
+[data-feather-bg="aqua-light"] svg{
+  fill: $aqua !important;
+}
+
+[data-feather-bg="blue1-light"] svg{
+  fill: $blue1 !important;
+}
+
+[data-feather-bg="blue2-light"] svg{
+  fill: $blue2 !important;
+}
+
+[data-feather-bg="magenta1-light"] svg{
+  fill: $magenta1 !important;
+}
+
+[data-feather-bg="magenta2-light"] svg{
+  fill: $magenta2 !important;
+}
+
+[data-feather-bg="pink1-light"] svg{
+  fill: $pink1 !important;
+}
+
+[data-feather-bg="pink2-light"] svg{
+  fill: $pink2 !important;
+}
+
+[data-feather-bg="brown1-light"] svg{
+  fill: $brown1 !important;
+}
+
+[data-feather-bg="brown2-light"] svg{
+  fill: $brown2 !important;
+}
+
+[data-feather-bg="gray1-light"] svg{
+  fill: $gray1 !important;
+}
+
+[data-feather-bg="gray2-light"] svg{
+  fill: $gray2 !important;
+}
+
+[data-feather-bg="dark1-light"] svg{
+  fill: $dark1 !important;
+}
+
+[data-feather-bg="dark2-light"] svg{
+  fill: $dark2 !important;
+}
+
+// Fade Dark
+
+[data-feather-bg="red1-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $red1-dark , 0.3 );
+}
+
+[data-feather-bg="red2-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $red2-dark , 0.3 );
+}
+
+[data-feather-bg="orange-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $orange-dark , 0.3 );
+}
+
+[data-feather-bg="yellow1-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $yellow1-dark , 0.3 );
+}
+
+[data-feather-bg="yellow2-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $yellow2-dark , 0.3 );
+}
+
+[data-feather-bg="green1-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $green1-dark , 0.3 );
+}
+
+[data-feather-bg="green2-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $green2-dark , 0.3 );
+}
+
+[data-feather-bg="mint-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $mint-dark , 0.3 );
+}
+
+[data-feather-bg="teal-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $teal-dark , 0.3 );
+}
+
+[data-feather-bg="aqua-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $aqua-dark , 0.3 );
+}
+
+[data-feather-bg="blue1-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $blue1-dark , 0.3 );
+}
+
+[data-feather-bg="blue2-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $blue2-dark , 0.3 );
+}
+
+[data-feather-bg="magenta1-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $magenta1-dark , 0.3 );
+}
+
+[data-feather-bg="magenta2-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $magenta2-dark , 0.3 );
+}
+
+[data-feather-bg="pink1-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $pink1-dark , 0.3 );
+}
+
+[data-feather-bg="pink2-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $pink2-dark , 0.3 );
+}
+
+[data-feather-bg="brown1-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $brown1-dark , 0.3 );
+}
+
+[data-feather-bg="brown2-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $brown2-dark , 0.3 );
+}
+
+[data-feather-bg="gray1-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $gray1-dark , 0.3 );
+}
+
+[data-feather-bg="gray2-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $gray2-dark , 0.3 );
+}
+
+[data-feather-bg="dark1-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $dark1-dark , 0.3 );
+}
+
+[data-feather-bg="dark2-fade-dark"] svg{
+  @include HEXtoRGBA(fill, $dark2-dark , 0.3 );
+}
+
+// Fade Light
+[data-feather-bg="red1-fade-light"] svg{
+  @include HEXtoRGBA(fill, $red1 , 0.3 );
+}
+
+[data-feather-bg="red2-fade-light"] svg{
+  @include HEXtoRGBA(fill, $red2 , 0.3 );
+}
+
+[data-feather-bg="orange-fade-light"] svg{
+  @include HEXtoRGBA(fill, $orange , 0.3 );
+}
+
+[data-feather-bg="yellow1-fade-light"] svg{
+  @include HEXtoRGBA(fill, $yellow1 , 0.3 );
+}
+
+[data-feather-bg="yellow2-fade-light"] svg{
+  @include HEXtoRGBA(fill, $yellow2 , 0.3 );
+}
+
+[data-feather-bg="green1-fade-light"] svg{
+  @include HEXtoRGBA(fill, $green1 , 0.3 );
+}
+
+[data-feather-bg="green2-fade-light"] svg{
+  @include HEXtoRGBA(fill, $green2 , 0.3 );
+}
+
+[data-feather-bg="mint-fade-light"] svg{
+  @include HEXtoRGBA(fill, $mint , 0.3 );
+}
+
+[data-feather-bg="teal-fade-light"] svg{
+  @include HEXtoRGBA(fill, $teal , 0.3 );
+}
+
+[data-feather-bg="aqua-fade-light"] svg{
+  @include HEXtoRGBA(fill, $aqua , 0.3 );
+}
+
+[data-feather-bg="blue1-fade-light"] svg{
+  @include HEXtoRGBA(fill, $blue1 , 0.3 );
+}
+
+[data-feather-bg="blue2-fade-light"] svg{
+  @include HEXtoRGBA(fill, $blue2 , 0.3 );
+}
+
+[data-feather-bg="magenta1-fade-light"] svg{
+  @include HEXtoRGBA(fill, $magenta1 , 0.3 );
+}
+
+[data-feather-bg="magenta2-fade-light"] svg{
+  @include HEXtoRGBA(fill, $magenta2 , 0.3 );
+}
+
+[data-feather-bg="pink1-fade-light"] svg{
+  @include HEXtoRGBA(fill, $pink1 , 0.3 );
+}
+
+[data-feather-bg="pink2-fade-light"] svg{
+  @include HEXtoRGBA(fill, $pink2 , 0.3 );
+}
+
+[data-feather-bg="brown1-fade-light"] svg{
+  @include HEXtoRGBA(fill, $brown1 , 0.3 );
+}
+
+[data-feather-bg="brown2-fade-light"] svg{
+  @include HEXtoRGBA(fill, $brown2 , 0.3 );
+}
+
+[data-feather-bg="gray1-fade-light"] svg{
+  @include HEXtoRGBA(fill, $gray1 , 0.3 );
+}
+
+[data-feather-bg="gray2-fade-light"] svg{
+  @include HEXtoRGBA(fill, $gray2 , 0.3 );
+}
+
+[data-feather-bg="dark1-fade-light"] svg{
+  @include HEXtoRGBA(fill, $dark1 , 0.3 );
+}
+
+[data-feather-bg="dark2-fade-light"] svg{
+  @include HEXtoRGBA(fill, $dark2 , 0.3 );
+}
+
+// Feather Color Dark
+[data-feather-color="red1-dark"] svg{
+  stroke: $red1-dark !important;
+}
+
+[data-feather-color="red2-dark"] svg{
+  stroke: $red2-dark !important;
+}
+
+[data-feather-color="orange-dark"] svg{
+  stroke: $orange-dark !important;
+}
+
+[data-feather-color="yellow1-dark"] svg{
+  stroke: $yellow1-dark !important;
+}
+
+[data-feather-color="yellow2-dark"] svg{
+  stroke: $yellow2-dark !important;
+}
+
+[data-feather-color="green1-dark"] svg{
+  stroke: $green1-dark !important;
+}
+
+[data-feather-color="green2-dark"] svg{
+  stroke: $green2-dark !important;
+}
+
+[data-feather-color="mint-dark"] svg{
+  stroke: $mint-dark !important;
+}
+
+[data-feather-color="teal-dark"] svg{
+  stroke: $teal-dark !important;
+}
+
+[data-feather-color="aqua-dark"] svg{
+  stroke: $aqua-dark !important;
+}
+
+[data-feather-color="blue1-dark"] svg{
+  stroke: $blue1-dark !important;
+}
+
+[data-feather-color="blue2-dark"] svg{
+  stroke: $blue2-dark !important;
+}
+
+[data-feather-color="magenta1-dark"] svg{
+  stroke: $magenta1-dark !important;
+}
+
+[data-feather-color="magenta2-dark"] svg{
+  stroke: $magenta2-dark !important;
+}
+
+[data-feather-color="pink1-dark"] svg{
+  stroke: $pink1-dark !important;
+}
+
+[data-feather-color="pink2-dark"] svg{
+  stroke: $pink2-dark !important;
+}
+
+[data-feather-color="brown1-dark"] svg{
+  stroke: $brown1-dark !important;
+}
+
+[data-feather-color="brown2-dark"] svg{
+  stroke: $brown2-dark !important;
+}
+
+[data-feather-color="gray1-dark"] svg{
+  stroke: $gray1-dark !important;
+}
+
+[data-feather-color="gray2-dark"] svg{
+  stroke: $gray2-dark !important;
+}
+
+[data-feather-color="dark1-dark"] svg{
+  stroke: $dark1-dark !important;
+}
+
+[data-feather-color="dark2-dark"] svg{
+  stroke: $dark2-dark !important;
+}
+
+
+// Data Feather Color
+
+[data-feather-color="red1-light"] svg{
+  stroke: $red1 !important;
+}
+
+[data-feather-color="red2-light"] svg{
+  stroke: $red2 !important;
+}
+
+[data-feather-color="orange-light"] svg{
+  stroke: $orange !important;
+}
+
+[data-feather-color="yellow1-light"] svg{
+  stroke: $yellow1 !important;
+}
+
+[data-feather-color="yellow2-light"] svg{
+  stroke: $yellow2 !important;
+}
+
+[data-feather-color="green1-light"] svg{
+  stroke: $green1 !important;
+}
+
+[data-feather-color="green2-light"] svg{
+  stroke: $green2 !important;
+}
+
+[data-feather-color="mint-light"] svg{
+  stroke: $mint !important;
+}
+
+[data-feather-color="teal-light"] svg{
+  stroke: $teal !important;
+}
+
+[data-feather-color="aqua-light"] svg{
+  stroke: $aqua !important;
+}
+
+[data-feather-color="blue1-light"] svg{
+  stroke: $blue1 !important;
+}
+
+[data-feather-color="blue2-light"] svg{
+  stroke: $blue2 !important;
+}
+
+[data-feather-color="magenta1-light"] svg{
+  stroke: $magenta1 !important;
+}
+
+[data-feather-color="magenta2-light"] svg{
+  stroke: $magenta2 !important;
+}
+
+[data-feather-color="pink1-light"] svg{
+  stroke: $pink1 !important;
+}
+
+[data-feather-color="pink2-light"] svg{
+  stroke: $pink2 !important;
+}
+
+[data-feather-color="brown1-light"] svg{
+  stroke: $brown1 !important;
+}
+
+[data-feather-color="brown2-light"] svg{
+  stroke: $brown2 !important;
+}
+
+[data-feather-color="gray1-light"] svg{
+  stroke: $gray1 !important;
+}
+
+[data-feather-color="gray2-light"] svg{
+  stroke: $gray2 !important;
+}
+
+[data-feather-color="dark1-light"] svg{
+  stroke: $dark1 !important;
+}
+
+[data-feather-color="dark2-light"] svg{
+  stroke: $dark2 !important;
+}
+
+// Feather Color Fade Dark
+
+[data-feather-color="red1-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $red1-dark , 1 );
+}
+
+[data-feather-color="red2-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $red2-dark , 1 );
+}
+
+[data-feather-color="orange-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $orange-dark , 1 );
+}
+
+[data-feather-color="yellow1-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $yellow1-dark , 1 );
+}
+
+[data-feather-color="yellow2-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $yellow2-dark , 1 );
+}
+
+[data-feather-color="green1-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $green1-dark , 1 );
+}
+
+[data-feather-color="green2-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $green2-dark , 1 );
+}
+
+[data-feather-color="mint-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $mint-dark , 1 );
+}
+
+[data-feather-color="teal-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $teal-dark , 1 );
+}
+
+[data-feather-color="aqua-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $aqua-dark , 1 );
+}
+
+[data-feather-color="blue1-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $blue1-dark , 1 );
+}
+
+[data-feather-color="blue2-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $blue2-dark , 1 );
+}
+
+[data-feather-color="magenta1-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $magenta1-dark , 1 );
+}
+
+[data-feather-color="magenta2-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $magenta2-dark , 1 );
+}
+
+[data-feather-color="pink1-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $pink1-dark , 1 );
+}
+
+[data-feather-color="pink2-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $pink2-dark , 1 );
+}
+
+[data-feather-color="brown1-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $brown1-dark , 1 );
+}
+
+[data-feather-color="brown2-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $brown2-dark , 1 );
+}
+
+[data-feather-color="gray1-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $gray1-dark , 1 );
+}
+
+[data-feather-color="gray2-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $gray2-dark , 1 );
+}
+
+[data-feather-color="dark1-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $dark1-dark , 1 );
+}
+
+[data-feather-color="dark2-fade-dark"] svg{
+  @include HEXtoRGBA(stroke, $dark2-dark , 1 );
+}
+
+// Feather Color Fade Light
+
+[data-feather-color="red1-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $red1 , 1 );
+}
+
+[data-feather-color="red2-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $red2 , 1 );
+}
+
+[data-feather-color="orange-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $orange , 1 );
+}
+
+[data-feather-color="yellow1-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $yellow1 , 1 );
+}
+
+[data-feather-color="yellow2-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $yellow2 , 1 );
+}
+
+[data-feather-color="green1-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $green1 , 1 );
+}
+
+[data-feather-color="green2-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $green2 , 1 );
+}
+
+[data-feather-color="mint-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $mint , 1 );
+}
+
+[data-feather-color="teal-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $teal , 1 );
+}
+
+[data-feather-color="aqua-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $aqua , 1 );
+}
+
+[data-feather-color="blue1-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $blue1 , 1 );
+}
+
+[data-feather-color="blue2-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $blue2 , 1 );
+}
+
+[data-feather-color="magenta1-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $magenta1 , 1 );
+}
+
+[data-feather-color="magenta2-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $magenta2 , 1 );
+}
+
+[data-feather-color="pink1-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $pink1 , 1 );
+}
+
+[data-feather-color="pink2-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $pink2 , 1 );
+}
+
+[data-feather-color="brown1-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $brown1 , 1 );
+}
+
+[data-feather-color="brown2-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $brown2 , 1 );
+}
+
+[data-feather-color="gray1-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $gray1 , 1 );
+}
+
+[data-feather-color="gray2-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $gray2 , 1 );
+}
+
+[data-feather-color="dark1-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $dark1 , 1 );
+}
+
+[data-feather-color="dark2-fade-light"] svg{
+  @include HEXtoRGBA(stroke, $dark2 , 1 );
+}
+
+
+// Background Light
+.bg-red1-light{
+  background-color: $red1 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-red2-light{
+  background-color: $red2 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-orange-light{
+  background-color: $orange !important;
+  color:#FFFFFF!important;
+}
+
+.bg-yellow1-light{
+  background-color: $yellow1 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-yellow2-light{
+  background-color: $yellow2 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-green1-light{
+  background-color: $green1 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-green2-light{
+  background-color: $green2 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-mint-light{
+  background-color: $mint !important;
+  color:#FFFFFF!important;
+}
+
+.bg-teal-light{
+  background-color: $teal !important;
+  color:#FFFFFF!important;
+}
+
+.bg-aqua-light{
+  background-color: $aqua !important;
+  color:#FFFFFF!important;
+}
+
+.bg-blue1-light{
+  background-color: $blue1 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-blue2-light{
+  background-color: $blue2 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-magenta1-light{
+  background-color: $magenta1 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-magenta2-light{
+  background-color: $magenta2 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-pink1-light{
+  background-color: $pink1 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-pink2-light{
+  background-color: $pink2 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-brown1-light{
+  background-color: $brown1 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-brown2-light{
+  background-color: $brown2 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-gray1-light{
+  background-color: $gray1 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-gray2-light{
+  background-color: $gray2 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-dark1-light{
+  background-color: $dark1 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-dark2-light{
+  background-color: $dark2 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-red1-light i,
+.bg-red1-dark i{
+  color:#FFFFFF;
+}
+
+.bg-red2-light i,
+.bg-red2-dark i{
+  color:#FFFFFF;
+}
+
+.bg-orange-light i,
+.bg-orange-dark i{
+  color:#FFFFFF;
+}
+
+.bg-yellow1-light i,
+.bg-yellow1-dark i{
+  color:#FFFFFF;
+}
+
+.bg-yellow2-light i,
+.bg-yellow2-dark i{
+  color:#FFFFFF;
+}
+
+.bg-green1-light i,
+.bg-green1-dark i{
+  color:#FFFFFF;
+}
+
+.bg-green2-light i,
+.bg-green2-dark i{
+  color:#FFFFFF;
+}
+
+.bg-mint-light i,
+.bg-mint-dark i{
+  color:#FFFFFF;
+}
+
+.bg-teal-light i,
+.bg-teal-dark i{
+  color:#FFFFFF;
+}
+
+.bg-aqua-light i,
+.bg-aqua-dark i{
+  color:#FFFFFF;
+}
+
+.bg-blue1-light i,
+.bg-blue1-dark i{
+  color:#FFFFFF;
+}
+
+.bg-blue2-light i,
+.bg-blue2-dark i{
+  color:#FFFFFF;
+}
+
+.bg-magenta1-light i,
+.bg-magenta1-dark i{
+  color:#FFFFFF;
+}
+
+.bg-magenta2-light i,
+.bg-magenta2-dark i{
+  color:#FFFFFF;
+}
+
+.bg-pink1-light i,
+.bg-pink1-dark i{
+  color:#FFFFFF;
+}
+
+.bg-pink2-light i,
+.bg-pink2-dark i{
+  color:#FFFFFF;
+}
+
+.bg-brown1-light i,
+.bg-brown1-dark i{
+  color:#FFFFFF;
+}
+
+.bg-brown2-light i,
+.bg-brown2-dark i{
+  color:#FFFFFF;
+}
+
+.bg-gray1-light i,
+.bg-gray1-dark i{
+  color:#FFFFFF;
+}
+
+.bg-gray2-light i,
+.bg-gray2-dark i{
+  color:#FFFFFF;
+}
+
+.bg-dark1-light i,
+.bg-dark1-dark i{
+  color:#FFFFFF;
+}
+
+.bg-dark2-light i,
+.bg-dark2-dark i{
+  color:#FFFFFF;
+}
+
+
+// Backgrounds Dark
+.bg-red1-dark{
+  background-color: $red1 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-red2-dark{
+  background-color: $red2 !important;
+  color:#FFFFFF!important;
+}
+
+.bg-orange-dark{
+  background-color: $orange-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-yellow1-dark{
+  background-color: $yellow1-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-yellow2-dark{
+  background-color: $yellow2-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-green1-dark{
+  background-color: $green1-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-green2-dark{
+  background-color: $green2-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-mint-dark{
+  background-color: $mint-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-teal-dark{
+  background-color: $teal-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-aqua-dark{
+  background-color: $aqua-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-blue1-dark{
+  background-color: $blue1-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-blue2-dark{
+  background-color: $blue2-dark!important;
+  color:#FFFFFF!important;
+}
+
+.bg-magenta1-dark{
+  background-color: $magenta1-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-magenta2-dark{
+  background-color: $magenta2-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-pink1-dark{
+  background-color: $pink1-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-pink2-dark{
+  background-color: $pink2-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-brown1-dark{
+  background-color: $brown1-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-brown2-dark{
+  background-color: $brown2-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-gray1-dark{
+  background-color: $gray1-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-gray2-dark{
+  background-color: $gray2-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-dark1-dark{
+  background-color: $dark1-dark !important;
+  color:#FFFFFF!important;
+}
+
+.bg-dark2-dark{
+  background-color: $dark2-dark !important;
+  color:#FFFFFF!important;
+}
+
+
+// Border Light
+.border-red1-light{
+  border-color: $red1 !important;
+}
+
+.border-red2-light{
+  border-color: $red2 !important;
+}
+
+.border-orange-light{
+  border-color: $orange !important;
+}
+
+.border-yellow1-light{
+  border-color: $yellow1 !important;
+}
+
+.border-yellow2-light{
+  border-color: $yellow2 !important;
+}
+
+.border-green1-light{
+  border-color: $green1 !important;
+}
+
+.border-green2-light{
+  border-color: $green2 !important;
+}
+
+.border-mint-light{
+  border-color: $mint !important;
+}
+
+.border-teal-light{
+  border-color: $teal !important;
+}
+
+.border-aqua-light{
+  border-color: $aqua !important;
+}
+
+.border-blue1-light{
+  border-color: $blue1 !important;
+}
+
+.border-blue2-light{
+  border-color: $blue2 !important;
+}
+
+.border-magenta1-light{
+  border-color: $magenta1 !important;
+}
+
+.border-magenta2-light{
+  border-color: $magenta2 !important;
+}
+
+.border-pink1-light{
+  border-color: $pink1 !important;
+}
+
+.border-pink2-light{
+  border-color: $pink2 !important;
+}
+
+.border-brown1-light{
+  border-color: $brown1 !important;
+}
+
+.border-brown2-light{
+  border-color: $brown2 !important;
+}
+
+.border-gray1-light{
+  border-color: $gray1 !important;
+}
+
+.border-gray2-light{
+  border-color: $gray2 !important;
+}
+
+.border-dark1-light{
+  border-color: $dark1 !important;
+}
+
+.border-dark2-light{
+  border-color: $dark2 !important;
+}
+
+// Border Dark
+
+.border-red1-dark{
+  border-color: $red1-dark !important;
+}
+
+.border-red2-dark{
+  border-color: $red2-dark !important;
+}
+
+.border-orange-dark{
+  border-color: $orange-dark !important;
+}
+
+.border-yellow1-dark{
+  border-color: $yellow1-dark !important;
+}
+
+.border-yellow2-dark{
+  border-color: $yellow2-dark !important;
+}
+
+.border-green1-dark{
+  border-color: $green1-dark !important;
+}
+
+.border-green2-dark{
+  border-color: $green2-dark !important;
+}
+
+.border-mint-dark{
+  border-color: $mint-dark !important;
+}
+
+.border-teal-dark{
+  border-color: $teal-dark !important;
+}
+
+.border-aqua-dark{
+  border-color: $aqua-dark !important;
+}
+
+.border-blue1-dark{
+  border-color: $blue1-dark !important;
+}
+
+.border-blue2-dark{
+  border-color: $blue2-dark !important;
+}
+
+.border-magenta1-dark{
+  border-color: $magenta1-dark !important;
+}
+
+.border-magenta2-dark{
+  border-color: $magenta2-dark !important;
+}
+
+.border-pink1-dark{
+  border-color: $pink1-dark !important;
+}
+
+.border-pink2-dark{
+  border-color: $pink2-dark !important;
+}
+
+.border-brown1-dark{
+  border-color: $brown1-dark !important;
+}
+
+.border-brown2-dark{
+  border-color: $brown2-dark !important;
+}
+
+.border-gray1-dark{
+  border-color: $gray1-dark !important;
+}
+
+.border-gray2-dark{
+  border-color: $gray2-dark !important;
+}
+
+.border-dark1-dark{
+  border-color: $dark1-dark !important;
+}
+
+.border-dark2-dark{
+  border-color: $dark2-dark !important;
+}
+
+// Color Light
+
+.color-red1-light{
+  color: $red1 !important;
+}
+
+.color-red2-light{
+  color: $red2 !important;
+}
+
+.color-orange-light{
+  color: $orange !important;
+}
+
+.color-yellow1-light{
+  color: $yellow1 !important;
+}
+
+.color-yellow2-light{
+  color: $yellow2 !important;
+}
+
+.color-green1-light{
+  color: $green1 !important;
+}
+
+.color-green2-light{
+  color: $green2 !important;
+}
+
+.color-mint-light{
+  color: $mint !important;
+}
+
+.color-teal-light{
+  color: $teal !important;
+}
+
+.color-aqua-light{
+  color: $aqua !important;
+}
+
+.color-blue1-light{
+  color: $blue1 !important;
+}
+
+.color-blue2-light{
+  color: $blue2 !important;
+}
+
+.color-magenta1-light{
+  color: $magenta1 !important;
+}
+
+.color-magenta2-light{
+  color: $magenta2 !important;
+}
+
+.color-pink1-light{
+  color: $pink1 !important;
+}
+
+.color-pink2-light{
+  color: $pink2 !important;
+}
+
+.color-brown1-light{
+  color: $brown1 !important;
+}
+
+.color-brown2-light{
+  color: $brown2 !important;
+}
+
+.color-gray1-light{
+  color: $gray1 !important;
+}
+
+.color-gray2-light{
+  color: $gray2 !important;
+}
+
+.color-dark1-light{
+  color: $dark1 !important;
+}
+
+.color-dark2-light{
+  color: $dark2 !important;
+}
+
+// Color Dark
+
+.color-red1-dark{
+  color: $red1-dark !important;
+}
+
+.color-red2-dark{
+  color: $red2-dark !important;
+}
+
+.color-orange-dark{
+  color: $orange-dark !important;
+}
+
+.color-yellow1-dark{
+  color: $yellow1-dark !important;
+}
+
+.color-yellow2-dark{
+  color: $yellow2-dark !important;
+}
+
+.color-green1-dark{
+  color: $green1-dark !important;
+}
+
+.color-green2-dark{
+  color: $green2-dark !important;
+}
+
+.color-mint-dark{
+  color: $mint-dark !important;
+}
+
+.color-teal-dark{
+  color: $teal-dark !important;
+}
+
+.color-aqua-dark{
+  color: $aqua-dark !important;
+}
+
+.color-blue1-dark{
+  color: $blue1-dark !important;
+}
+
+.color-blue2-dark{
+  color: $blue2-dark !important;
+}
+
+.color-magenta1-dark{
+  color: $magenta1-dark !important;
+}
+
+.color-magenta2-dark{
+  color: $magenta2-dark !important;
+}
+
+.color-pink1-dark{
+  color: $pink1-dark !important;
+}
+
+.color-pink2-dark{
+  color: $pink2-dark !important;
+}
+
+.color-brown1-dark{
+  color: $brown1-dark !important;
+}
+
+.color-brown2-dark{
+  color: $brown2-dark !important;
+}
+
+.color-gray1-dark{
+  color: $gray1-dark !important;
+}
+
+.color-gray2-dark{
+  color: $gray2-dark !important;
+}
+
+.color-dark1-dark{
+  color: $dark1-dark !important;
+}
+
+.color-dark2-dark{
+  color: $dark2-dark !important;
+}
+
+// Background Fade Light
+
+.bg-fade-red1-light{
+  @include HEXtoRGBA(background-color, $red1, 1);
+  color: #FFFFFF;
+}
+.bg-fade-red2-light{
+  @include HEXtoRGBA(background-color, $red2, 1);
+  color: #FFFFFF;
+}
+.bg-fade-orange-light{
+  @include HEXtoRGBA(background-color, $orange, 1);
+  color: #FFFFFF;
+}
+.bg-fade-yellow1-light{
+  @include HEXtoRGBA(background-color, $yellow1, 1);
+  color: #FFFFFF;
+}
+.bg-fade-yellow2-light{
+  @include HEXtoRGBA(background-color, $yellow2, 1);
+  color: #FFFFFF;
+}
+.bg-fade-green1-light{
+  @include HEXtoRGBA(background-color, $green1, 1);
+  color: #FFFFFF;
+}
+.bg-fade-green2-light{
+  @include HEXtoRGBA(background-color, $green2, 1);
+  color: #FFFFFF;
+}
+.bg-fade-mint-light{
+  @include HEXtoRGBA(background-color, $mint, 1);
+  color: #FFFFFF;
+}
+.bg-fade-teal-light{
+  @include HEXtoRGBA(background-color, $teal, 1);
+  color: #FFFFFF;
+}
+.bg-fade-aqua-light{
+  @include HEXtoRGBA(background-color, $aqua, 1);
+  color: #FFFFFF;
+}
+.bg-fade-blue1-light{
+  @include HEXtoRGBA(background-color, $blue1, 1);
+  color: #FFFFFF;
+}
+.bg-fade-blue2-light{
+  @include HEXtoRGBA(background-color, $blue2, 1);
+  color: #FFFFFF;
+}
+.bg-fade-magenta1-light{
+  @include HEXtoRGBA(background-color, $magenta1, 1);
+  color: #FFFFFF;
+}
+.bg-fade-magenta2-light{
+  @include HEXtoRGBA(background-color, $magenta2, 1);
+  color: #FFFFFF;
+}
+.bg-fade-pink1-light{
+  @include HEXtoRGBA(background-color, $pink1, 1);
+  color: #FFFFFF;
+}
+.bg-fade-pink2-light{
+  @include HEXtoRGBA(background-color, $pink2, 1);
+  color: #FFFFFF;
+}
+.bg-fade-brown1-light{
+  @include HEXtoRGBA(background-color, $brown1, 1);
+  color: #FFFFFF;
+}
+.bg-fade-brown2-light{
+  @include HEXtoRGBA(background-color, $brown2, 1);
+  color: #FFFFFF;
+}
+.bg-fade-gray1-light{
+  @include HEXtoRGBA(background-color, $gray1, 1);
+  color: #FFFFFF;
+}
+.bg-fade-gray2-light{
+  @include HEXtoRGBA(background-color, $gray2, 1);
+  color: #FFFFFF;
+}
+.bg-fade-dark1-light{
+  @include HEXtoRGBA(background-color, $dark1, 1);
+  color: #FFFFFF;
+}
+.bg-fade-dark2-light{
+  @include HEXtoRGBA(background-color, $dark2, 1);
+  color: #FFFFFF;
+}
+
+// Background Light/Dark icon
+
+.bg-fade-red1-light i,
+.bg-red1-dark i{
+  color:#FFFFFF;
+}
+
+.bg-fade-red2-light i,
+.bg-red2-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-orange-light i,
+.bg-orange-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-yellow1-light i,
+.bg-yellow1-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-yellow2-light i,
+.bg-yellow2-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-green1-light i,
+.bg-green1-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-green2-light i,
+.bg-green2-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-mint-light i,
+.bg-mint-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-teal-light i,
+.bg-teal-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-aqua-light i,
+.bg-aqua-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-blue1-light i,
+.bg-blue1-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-blue2-light i,
+.bg-blue2-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-magenta1-light i,
+.bg-magenta1-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-magenta2-light i,
+.bg-magenta2-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-pink1-light i,
+.bg-pink1-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-pink2-light i,
+.bg-pink2-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-brown1-light i,
+.bg-brown1-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-brown2-light i,
+.bg-brown2-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-gray1-light i,
+.bg-gray1-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-gray2-light i,
+.bg-gray2-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-dark1-light i,
+.bg-dark1-dark i{
+  color:#FFFFFF;
+}
+.bg-fade-dark2-light i,
+.bg-dark2-dark i{
+  color:#FFFFFF;
+}
+
+// Background Fade Dark
+
+.bg-fade-red1-dark{
+  @include HEXtoRGBA(background-color, $red1-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-red2-dark{
+  @include HEXtoRGBA(background-color, $red2-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-orange-dark{
+  @include HEXtoRGBA(background-color, $orange-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-yellow1-dark{
+  @include HEXtoRGBA(background-color, $yellow1-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-yellow2-dark{
+  @include HEXtoRGBA(background-color, $yellow2-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-green1-dark{
+  @include HEXtoRGBA(background-color, $green1-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-green2-dark{
+  @include HEXtoRGBA(background-color, $green2-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-mint-dark{
+  @include HEXtoRGBA(background-color, $mint-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-teal-dark{
+  @include HEXtoRGBA(background-color, $teal-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-aqua-dark{
+  @include HEXtoRGBA(background-color, $aqua-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-blue1-dark{
+  @include HEXtoRGBA(background-color, $blue1-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-blue2-dark{
+  @include HEXtoRGBA(background-color, $blue2-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-magenta1-dark{
+  @include HEXtoRGBA(background-color, $magenta1-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-magenta2-dark{
+  @include HEXtoRGBA(background-color, $magenta2-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-pink1-dark{
+  @include HEXtoRGBA(background-color, $pink1-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-pink2-dark{
+  @include HEXtoRGBA(background-color, $pink2-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-brown1-dark{
+  @include HEXtoRGBA(background-color, $brown1-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-brown2-dark{
+  @include HEXtoRGBA(background-color, $brown2-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-gray1-dark{
+  @include HEXtoRGBA(background-color, $gray1-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-gray2-dark{
+  @include HEXtoRGBA(background-color, $gray2-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-dark1-dark{
+  @include HEXtoRGBA(background-color, $dark1-dark, 1);
+  color: #FFFFFF;
+}
+.bg-fade-dark2-dark{
+  @include HEXtoRGBA(background-color, $dark2-dark, 1);
+  color: #FFFFFF;
+}
+
+
+// Border Fade Light
+
+.border-fade-red1-light{
+  @include HEXtoRGBA(border-color, $red1, 1);
+}
+.border-fade-red2-light{
+  @include HEXtoRGBA(border-color, $red2, 1);
+}
+.border-fade-orange-light{
+  @include HEXtoRGBA(border-color, $orange, 1);
+}
+.border-fade-yellow1-light{
+  @include HEXtoRGBA(border-color, $yellow1, 1);
+}
+.border-fade-yellow2-light{
+  @include HEXtoRGBA(border-color, $yellow2, 1);
+}
+.border-fade-green1-light{
+  @include HEXtoRGBA(border-color, $green1, 1);
+}
+.border-fade-green2-light{
+  @include HEXtoRGBA(border-color, $green2, 1);
+}
+.border-fade-mint-light{
+  @include HEXtoRGBA(border-color, $mint, 1);
+}
+.border-fade-teal-light{
+  @include HEXtoRGBA(border-color, $teal, 1);
+}
+.border-fade-aqua-light{
+  @include HEXtoRGBA(border-color, $aqua, 1);
+}
+.border-fade-blue1-light{
+  @include HEXtoRGBA(border-color, $blue1, 1);
+}
+.border-fade-blue2-light{
+  @include HEXtoRGBA(border-color, $blue2, 1);
+}
+.border-fade-magenta1-light{
+  @include HEXtoRGBA(border-color, $magenta1, 1);
+}
+.border-fade-magenta2-light{
+  @include HEXtoRGBA(border-color, $magenta2, 1);
+}
+.border-fade-pink1-light{
+  @include HEXtoRGBA(border-color, $pink1, 1);
+}
+.border-fade-pink2-light{
+  @include HEXtoRGBA(border-color, $pink2, 1);
+}
+.border-fade-brown1-light{
+  @include HEXtoRGBA(border-color, $brown1, 1);
+}
+.border-fade-brown2-light{
+  @include HEXtoRGBA(border-color, $brown2, 1);
+}
+.border-fade-gray1-light{
+  @include HEXtoRGBA(border-color, $gray1, 1);
+}
+.border-fade-gray2-light{
+  @include HEXtoRGBA(border-color, $gray2, 1);
+}
+.border-fade-dark1-light{
+  @include HEXtoRGBA(border-color, $dark1, 1);
+}
+.border-fade-dark2-light{
+  @include HEXtoRGBA(border-color, $dark2, 1);
+}
+
+// Border Fade Dark
+
+.border-fade-red1-dark{
+  @include HEXtoRGBA(border-color, $red1-dark, 1);
+}
+.border-fade-red2-dark{
+  @include HEXtoRGBA(border-color, $red2-dark, 1);
+}
+.border-fade-orange-dark{
+  @include HEXtoRGBA(border-color, $orange-dark, 1);
+}
+.border-fade-yellow1-dark{
+  @include HEXtoRGBA(border-color, $yellow1-dark, 1);
+}
+.border-fade-yellow2-dark{
+  @include HEXtoRGBA(border-color, $yellow2-dark, 1);
+}
+.border-fade-green1-dark{
+  @include HEXtoRGBA(border-color, $green1-dark, 1);
+}
+.border-fade-green2-dark{
+  @include HEXtoRGBA(border-color, $green2-dark, 1);
+}
+.border-fade-mint-dark{
+  @include HEXtoRGBA(border-color, $mint-dark, 1);
+}
+.border-fade-teal-dark{
+  @include HEXtoRGBA(border-color, $teal-dark, 1);
+}
+.border-fade-aqua-dark{
+  @include HEXtoRGBA(border-color, $aqua-dark, 1);
+}
+.border-fade-blue1-dark{
+  @include HEXtoRGBA(border-color, $blue1-dark, 1);
+}
+.border-fade-blue2-dark{
+  @include HEXtoRGBA(border-color, $blue2-dark, 1);
+}
+.border-fade-magenta1-dark{
+  @include HEXtoRGBA(border-color, $magenta1-dark, 1);
+}
+.border-fade-magenta2-dark{
+  @include HEXtoRGBA(border-color, $magenta2-dark, 1);
+}
+.border-fade-pink1-dark{
+  @include HEXtoRGBA(border-color, $pink1-dark, 1);
+}
+.border-fade-pink2-dark{
+  @include HEXtoRGBA(border-color, $pink2-dark, 1);
+}
+.border-fade-brown1-dark{
+  @include HEXtoRGBA(border-color, $brown1-dark, 1);
+}
+.border-fade-brown2-dark{
+  @include HEXtoRGBA(border-color, $brown2-dark, 1);
+}
+.border-fade-gray1-dark{
+  @include HEXtoRGBA(border-color, $gray1-dark, 1);
+}
+.border-fade-gray2-dark{
+  @include HEXtoRGBA(border-color, $gray2-dark, 1);
+}
+.border-fade-dark1-dark{
+  @include HEXtoRGBA(border-color, $dark1-dark, 1);
+}
+.border-fade-dark2-dark{
+  @include HEXtoRGBA(border-color, $dark2-dark, 1);
+}
+
+// Color Fade Light
+
+.color-fade-red1-light{
+  @include HEXtoRGBA(color, $red1, 1);
+}
+.color-fade-red2-light{
+  @include HEXtoRGBA(color, $red2, 1);
+}
+.color-fade-orange-light{
+  @include HEXtoRGBA(color, $orange, 1);
+}
+.color-fade-yellow1-light{
+  @include HEXtoRGBA(color, $yellow1, 1);
+}
+.color-fade-yellow2-light{
+  @include HEXtoRGBA(color, $yellow2, 1);
+}
+.color-fade-green1-light{
+  @include HEXtoRGBA(color, $green1, 1);
+}
+.color-fade-green2-light{
+  @include HEXtoRGBA(color, $green2, 1);
+}
+.color-fade-mint-light{
+  @include HEXtoRGBA(color, $mint, 1);
+}
+.color-fade-teal-light{
+  @include HEXtoRGBA(color, $teal, 1);
+}
+.color-fade-aqua-light{
+  @include HEXtoRGBA(color, $aqua, 1);
+}
+.color-fade-blue1-light{
+  @include HEXtoRGBA(color, $blue1, 1);
+}
+.color-fade-blue2-light{
+  @include HEXtoRGBA(color, $blue2, 1);
+}
+.color-fade-magenta1-light{
+  @include HEXtoRGBA(color, $magenta1, 1);
+}
+.color-fade-magenta2-light{
+  @include HEXtoRGBA(color, $magenta2, 1);
+}
+.color-fade-pink1-light{
+  @include HEXtoRGBA(color, $pink1, 1);
+}
+.color-fade-pink2-light{
+  @include HEXtoRGBA(color, $pink2, 1);
+}
+.color-fade-brown1-light{
+  @include HEXtoRGBA(color, $brown1, 1);
+}
+.color-fade-brown2-light{
+  @include HEXtoRGBA(color, $brown2, 1);
+}
+.color-fade-gray1-light{
+  @include HEXtoRGBA(color, $gray1, 1);
+}
+.color-fade-gray2-light{
+  @include HEXtoRGBA(color, $gray2, 1);
+}
+.color-fade-dark1-light{
+  @include HEXtoRGBA(color, $dark1, 1);
+}
+.color-fade-dark2-light{
+  @include HEXtoRGBA(color, $dark2, 1);
+}
+
+// Color Fade Dark
+
+.color-fade-red1-dark{
+  @include HEXtoRGBA(color, $red1-dark, 1);
+}
+.color-fade-red2-dark{
+  @include HEXtoRGBA(color, $red2-dark, 1);
+}
+.color-fade-orange-dark{
+  @include HEXtoRGBA(color, $orange-dark, 1);
+}
+.color-fade-yellow1-dark{
+  @include HEXtoRGBA(color, $yellow1-dark, 1);
+}
+.color-fade-yellow2-dark{
+  @include HEXtoRGBA(color, $yellow2-dark, 1);
+}
+.color-fade-green1-dark{
+  @include HEXtoRGBA(color, $green1-dark, 1);
+}
+.color-fade-green2-dark{
+  @include HEXtoRGBA(color, $green2-dark, 1);
+}
+.color-fade-mint-dark{
+  @include HEXtoRGBA(color, $mint-dark, 1);
+}
+.color-fade-teal-dark{
+  @include HEXtoRGBA(color, $teal-dark, 1);
+}
+.color-fade-aqua-dark{
+  @include HEXtoRGBA(color, $aqua-dark, 1);
+}
+.color-fade-blue1-dark{
+  @include HEXtoRGBA(color, $blue1-dark, 1);
+}
+.color-fade-blue2-dark{
+  @include HEXtoRGBA(color, $blue2-dark, 1);
+}
+.color-fade-magenta1-dark{
+  @include HEXtoRGBA(color, $magenta1-dark, 1);
+}
+.color-fade-magenta2-dark{
+  @include HEXtoRGBA(color, $magenta2-dark, 1);
+}
+.color-fade-pink1-dark{
+  @include HEXtoRGBA(color, $pink1-dark, 1);
+}
+.color-fade-pink2-dark{
+  @include HEXtoRGBA(color, $pink2-dark, 1);
+}
+.color-fade-brown1-dark{
+  @include HEXtoRGBA(color, $brown1-dark, 1);
+}
+.color-fade-brown2-dark{
+  @include HEXtoRGBA(color, $brown2-dark, 1);
+}
+.color-fade-gray1-dark{
+  @include HEXtoRGBA(color, $gray1-dark, 1);
+}
+.color-fade-gray2-dark{
+  @include HEXtoRGBA(color, $gray2-dark, 1);
+}
+.color-fade-dark1-dark{
+  @include HEXtoRGBA(color, $dark1-dark, 1);
+}
+.color-fade-dark2-dark{
+  @include HEXtoRGBA(color, $dark2-dark, 1);
+}
+
+// Background Gradient
+
+.bg-gradient-red1{
+  background-image: linear-gradient(to bottom, $red1 0, $red1-dark 100%)
+}
+.bg-gradient-red2{
+  background-image: linear-gradient(to bottom, $red2 0, $red2-dark 100%)
+}
+.bg-gradient-orange{
+  background-image: linear-gradient(to bottom, $orange 0, $orange-dark 100%)
+}
+.bg-gradient-yellow1{
+  background-image: linear-gradient(to bottom, $yellow1 0, $yellow1-dark 100%)
+}
+.bg-gradient-yellow2{
+  background-image: linear-gradient(to bottom, $yellow2 0, $yellow2-dark 100%)
+}
+.bg-gradient-green1{
+  background-image: linear-gradient(to bottom, $green1 0, $green1-dark 100%)
+}
+.bg-gradient-green2{
+  background-image: linear-gradient(to bottom, $green2 0, $green2-dark 100%)
+}
+.bg-gradient-mint{
+  background-image: linear-gradient(to bottom, $mint 0, $mint-dark 100%)
+}
+.bg-gradient-teal{
+  background-image: linear-gradient(to bottom, $teal 0, $teal-dark 100%)
+}
+.bg-gradient-aqua{
+  background-image: linear-gradient(to bottom, $aqua 0, $aqua-dark 100%)
+}
+.bg-gradient-blue1{
+  background-image: linear-gradient(to bottom, $blue1 0, $blue1-dark 100%)
+}
+.bg-gradient-blue2{
+  background-image: linear-gradient(to bottom, $blue2 0, $blue2-dark 100%)
+}
+.bg-gradient-magenta1{
+  background-image: linear-gradient(to bottom, $magenta1 0, $magenta1-dark 100%)
+}
+.bg-gradient-magenta2{
+  background-image: linear-gradient(to bottom, $magenta2 0, $magenta2-dark 100%)
+}
+.bg-gradient-pink1{
+  background-image: linear-gradient(to bottom, $pink1 0, $pink1-dark 100%)
+}
+.bg-gradient-pink2{
+  background-image: linear-gradient(to bottom, $pink2 0, $pink2-dark 100%)
+}
+.bg-gradient-brown1{
+  background-image: linear-gradient(to bottom, $brown1 0, $brown1-dark 100%)
+}
+.bg-gradient-brown2{
+  background-image: linear-gradient(to bottom, $brown2 0, $brown2-dark 100%)
+}
+.bg-gradient-gray1{
+  background-image: linear-gradient(to bottom, $gray1 0, $gray1-dark 100%)
+}
+.bg-gradient-gray2{
+  background-image: linear-gradient(to bottom, $gray2 0, $gray2-dark 100%)
+}
+.bg-gradient-dark1{
+  background-image: linear-gradient(to bottom, $brown2 0, $dark1-dark 100%)
+}
+.bg-gradient-dark2{
+  background-image: linear-gradient(to bottom, $brown2 0, $dark2-dark 100%)
+}
+
+// Background Social
+
+.bg-facebook{
+  background-color: $facebook !important;
+  color:#FFFFFF;
+}
+
+.bg-linkedin{
+  background-color: $linkedin !important;
+  color:#FFFFFF;
+}
+
+.bg-twitter{
+  background-color: $twitter !important;
+  color:#FFFFFF;
+}
+
+.bg-google{
+  background-color: $google !important;
+  color:#FFFFFF;
+}
+
+.bg-whatsapp{
+  background-color: $whatsapp !important;
+  color:#FFFFFF;
+}
+
+.bg-pinterest{
+  background-color: $pinterest !important;
+  color:#FFFFFF;
+}
+
+.bg-sms{
+  background-color: $sms !important;
+  color:#FFFFFF;
+}
+
+.bg-mail{
+  background-color: $mail !important;
+  color:#FFFFFF;
+}
+.bg-dribbble{
+  background-color: $dribbble !important;
+  color:#FFFFFF;
+}
+
+.bg-phone{
+  background-color: $phone !important;
+  color:#FFFFFF;
+}
+
+.bg-skype{
+  background-color: $skype !important;
+  color:#FFFFFF;
+}
+.bg-instagram{
+  background-color: $instagram !important;
+  color:#FFFFFF;
+}
+
+// Color Social
+.color-facebook{
+  color: $facebook !important;
+}
+
+.color-linkedin{
+  color: $linkedin !important;
+}
+
+.color-twitter{
+  color: $twitter !important;
+}
+
+.color-google{
+  color: $google !important;
+}
+
+.color-whatsapp{
+  color: $whatsapp !important;
+}
+
+.color-pinterest{
+  color: $pinterest !important;
+}
+
+.color-sms{
+  color: $sms !important;
+}
+
+.color-mail{
+  color: $mail !important;
+}
+.color-dribbble{
+  color: $dribbble !important;
+}
+
+.color-phone{
+  color: $phone !important;
+}
+
+.color-skype{
+  color: $skype !important;
+}
+.color-instagram{
+  color: $instagram !important;
+}
+
+// Body Gradient
+
+.body-red1{
+  background-image: linear-gradient(to bottom, $red1 0, $red1-dark-gradient 100%);
+}
+.body-red2{
+  background-image: linear-gradient(to bottom, $red2 0, $red2-dark-gradient 100%);
+}
+.body-orange{
+  background-image: linear-gradient(to bottom, $orange 0, $orange-dark-gradient 100%);
+}
+.body-yellow1{
+  background-image: linear-gradient(to bottom, $yellow1 0, $yellow1-dark-gradient 100%);
+}
+.body-yellow2{
+  background-image: linear-gradient(to bottom, $yellow2 0, $yellow2-dark-gradient 100%);
+}
+.body-green1{
+  background-image: linear-gradient(to bottom, $green1 0, $green1-dark-gradient 100%);
+}
+.body-green2{
+  background-image: linear-gradient(to bottom, $green2 0, $green2-dark-gradient 100%);
+}
+.body-mint{
+  background-image: linear-gradient(to bottom, $mint 0, $mint-dark-gradient 100%);
+}
+.body-teal{
+  background-image: linear-gradient(to bottom, $teal 0, $teal-dark-gradient 100%);
+}
+.body-aqua{
+  background-image: linear-gradient(to bottom, $aqua 0, $aqua-dark-gradient 100%);
+}
+.body-blue1{
+  background-image: linear-gradient(to bottom, $blue1 0, $blue1-dark-gradient 100%);
+}
+.body-blue2{
+  background-image: linear-gradient(to bottom, $blue2 0, $blue2-dark-gradient 100%);
+}
+.body-magenta1{
+  background-image: linear-gradient(to bottom, $magenta1 0, $magenta1-dark-gradient 100%);
+}
+.body-magenta2{
+  background-image: linear-gradient(to bottom, $magenta2 0, $magenta2-dark-gradient 100%);
+}
+.body-pink1{
+  background-image: linear-gradient(to bottom, $pink1 0, $pink1-dark-gradient 100%);
+}
+.body-pink2{
+  background-image: linear-gradient(to bottom, $pink2 0, $pink2-dark-gradient 100%);
+}
+.body-brown1{
+  background-image: linear-gradient(to bottom, $brown1 0, $brown1-dark-gradient 100%);
+}
+.body-brown2{
+  background-image: linear-gradient(to bottom, $brown2 0, $brown2-dark-gradient 100%);
+}
+.body-gray1{
+  background-image: linear-gradient(to bottom, $gray1 0, $gray1-dark-gradient 100%);
+}
+.body-gray2{
+  background-image: linear-gradient(to bottom, $gray2 0, $gray2-dark-gradient 100%);
+}
+.body-dark1{
+  background-image: linear-gradient(to bottom, $dark1 0, $dark1-dark-gradient 100%);
+}
+.body-dark2{
+  background-image: linear-gradient(to bottom, $dark2 0, $dark2-dark-gradient 100%);
+}
+
+
+
