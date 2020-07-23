@@ -4,135 +4,108 @@
 
 
     <div class="row justify-content-center">
-        <div class="characterDiv col-5" *ngIf="selectedCharacter!==undefined">
-            <div class="row">
-                <!-- <div class="col-lg-6 col-md-6 statDivChar d-flex flex-wrap justify-content-center">
-                    <div class="inner">
-                        <table class="table table-borderless" *ngIf="selectedCharacter.current_stats">
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <button class="btn rounded-pill font-weight-bold" (click)="calculateCharacterCurrentStats()">Current</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn rounded-pill font-weight-bold" (click)="calculateCharacterMaxStats()">Max</button>
-                                    </td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr>
-                                <td class="text-right font-weight-bold" style="white-space:nowrap;">HP</td>
-                                    <td colspan="3">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm hp" role="progressbar"
-                                                aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showCharacterStats.hp /  character_max_stats.hp * 100 + '%'}">
-                                                <span>{{showCharacterStats.hp}}</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right font-weight-bold" style="white-space:nowrap;">STR</td>
-                                    <td colspan="3">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm str" role="progressbar"
-                                                aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showCharacterStats.str / character_max_stats.str * 100 + '%'}">
-                                                <span>{{showCharacterStats.str}}</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right font-weight-bold" style="white-space:nowrap;">DEX</td>
-                                    <td colspan="3">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm dex" role="progressbar"
-                                                aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showCharacterStats.dex / character_max_stats.dex * 100 + '%'}">
-                                                <span>{{showCharacterStats.dex}}</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right font-weight-bold" style="white-space:nowrap;">AGI</td>
-                                    <td colspan="3">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm agi" role="progressbar"
-                                                aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showCharacterStats.agi / character_max_stats.agi * 100 + '%'}">
-                                                <span>{{showCharacterStats.agi}}</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    </tr>
-                                <tr>
-                                    <td class="text-right font-weight-bold" style="white-space:nowrap;">Luck</td>
-                                    <td colspan="3">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm luk" role="progressbar"
-                                                aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showCharacterStats.luk / character_max_stats.luk * 100 + '%'}">
-                                                <span>{{showCharacterStats.luk}}</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
+        <div class="characterDiv col-2" *ngIf="selectedCharacter!==undefined">
+            <div class="game-card-container" (click)="showCardStats('character')" [class.card-active]="!showCharacterStats">
+                <div class="card-background m-3">
+                    <div class="card-frame p-3">
 
-                                <tr>
-                                    <td class="text-right font-weight-bold" style="white-space:nowrap;">Total</td>
-                                    <td colspan="3">
-                                        {{showCharacterStats.hp + showCharacterStats.str + showCharacterStats.dex + showCharacterStats.agi + showCharacterStats.luk}}
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div> -->
-                <div class="col-lg-6 col-md-6">
+                        <div class="front">
+                            <div class="game-card-header row no-gutters mb-2 justify-content-between game-card-border">
+                                <h1 class="name ml-3 my-2">{{selectedCharacter.name}}</h1>
+                                <h1 class="name mr-3 my-2">{{selectedCharacter.level}}</h1>
+                            </div>
+                            <div class="game-card-image preload-img game-card-border mx-2" [style.background-image]="'url('+selectedCharacter.image+')'" style="height: 30vh;"></div>
 
-                    <div class="game-card-container">
-                        <div class="card-background m-3">
-                            <div class="card-frame p-3">
-                                <!-- Card Front -->
-                                <div class="card-front">
-                                    <div class="game-card-header row no-gutters mb-2 justify-content-between game-card-border">
-                                        <h1 class="name ml-3 my-2">{{selectedCharacter.name}}</h1>
-                                        <h1 class="name mr-3 my-2">{{selectedCharacter.level}}</h1>
-                                    </div>
-                                    <div class="game-card-image preload-img game-card-border mx-2" [style.background-image]="'url('+selectedCharacter.image+')'" style="height: 30vh;">
+                            <div class="game-card-header row no-gutters justify-content-between game-card-border mb-2">
+                                <h1 class="type ml-3 my-2">Hero</h1>
+                            </div>
 
-                                    </div>
-
-                                    <div class="game-card-header row no-gutters justify-content-between game-card-border mb-2">
-                                        <h1 class="type ml-3 my-2">Hero</h1>
-                                    </div>
-
-                                    <div class="description text-box game-card-border mx-2 mb-4 p-2 mt-1">
-                                        <p class="m-0">{{selectedCharacter.short_description}}</p>
-                                    </div>
-                                </div>
-
-                                <!-- Card Back -->
-                                <div class="card-back">
-                                    <h2>Hola</h2>
-                                </div>
-
+                            <div class="description text-box game-card-border mx-2 mb-4 p-2 mt-1">
+                                <p class="m-0">{{selectedCharacter.short_description}}</p>
                             </div>
                         </div>
 
 
-                    </div>
+                        <div class="back">
+                            <table class="table table-borderless" *ngIf="selectedCharacter.current_stats">
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <button class="btn rounded-pill font-weight-bold color-white" (click)="calculateCharacterCurrentStats()">Current</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn rounded-pill font-weight-bold color-white" (click)="calculateCharacterMaxStats()">Max</button>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                    <td class="text-right font-weight-bold color-white" style="white-space:nowrap;">HP</td>
+                                        <td colspan="3">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm hp" role="progressbar"
+                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showCharacterStats.hp /  character_max_stats.hp * 100 + '%'}">
+                                                    <span>{{showCharacterStats.hp}}</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right font-weight-bold color-white" style="white-space:nowrap;">STR</td>
+                                        <td colspan="3">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm str" role="progressbar"
+                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showCharacterStats.str / character_max_stats.str * 100 + '%'}">
+                                                    <span>{{showCharacterStats.str}}</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right font-weight-bold color-white" style="white-space:nowrap;">DEX</td>
+                                        <td colspan="3">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm dex" role="progressbar"
+                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showCharacterStats.dex / character_max_stats.dex * 100 + '%'}">
+                                                    <span>{{showCharacterStats.dex}}</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right font-weight-bold color-white" style="white-space:nowrap;">AGI</td>
+                                        <td colspan="3">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm agi" role="progressbar"
+                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showCharacterStats.agi / character_max_stats.agi * 100 + '%'}">
+                                                    <span>{{showCharacterStats.agi}}</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        </tr>
+                                    <tr>
+                                        <td class="text-right font-weight-bold color-white" style="white-space:nowrap;">Luck</td>
+                                        <td colspan="3">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm luk" role="progressbar"
+                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showCharacterStats.luk / character_max_stats.luk * 100 + '%'}">
+                                                    <span>{{showCharacterStats.luk}}</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
 
-
-
-
-                    <!-- <div class="card card-style preload-img" [style.background-image]="'url('+selectedCharacter.image+')'" style="height: 55vh;">
-                        <div class="card-bottom ml-3">
-                            <h1 class="font-40 line-height-xl pb-2">{{selectedCharacter.name}} ({{selectedCharacter.level}})</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ex mi, porttitor id nisi vel neque.
-                            </p>
+                                    <tr>
+                                        <td class="text-right font-weight-bold color-white" style="white-space:nowrap;">Total</td>
+                                        <td colspan="3">
+                                            {{showCharacterStats.hp + showCharacterStats.str + showCharacterStats.dex + showCharacterStats.agi + showCharacterStats.luk}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="card-overlay bg-gradient-fade"></div>
-                    </div> -->
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -141,206 +114,112 @@
             <h3 (click)="play()" class="text-center">VS</h3>
         </div>
 
-        <div class="monsterDiv col-5" *ngIf="monsterToFight!==undefined">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="card card-style preload-img" [style.background-image]="'url('+monsterToFight.image+')'" style="height: 55vh;">
-                        <div class="card-bottom ml-3">
-                            <h1 class="font-40 line-height-xl pb-2">{{monsterToFight.name}} ({{monsterToFight.level}})</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ex mi, porttitor id nisi vel neque.
-                            </p>
+        <div class="monsterDiv col-2" *ngIf="monsterToFight!==undefined">
+            <div class="game-card-container" (click)="showCardStats('monster')" [class.card-active]="!showMonsterStats">
+                <div class="card-background m-3">
+                    <div class="card-frame p-3">
+
+                        <div class="front">
+                            <div class="game-card-header row no-gutters mb-2 justify-content-between game-card-border">
+                                <h1 class="name ml-3 my-2">{{monsterToFight.name}}</h1>
+                                <h1 class="name mr-3 my-2">{{monsterToFight.level}}</h1>
+                            </div>
+                            <div class="game-card-image preload-img game-card-border mx-2" [style.background-image]="'url('+monsterToFight.image+')'" style="height: 30vh;"></div>
+
+                            <div class="game-card-header row no-gutters justify-content-between game-card-border mb-2">
+                                <h1 class="type ml-3 my-2">Monster</h1>
+                            </div>
+
+                            <div class="description text-box game-card-border mx-2 mb-4 p-2 mt-1">
+                                <p class="m-0">{{monsterToFight.short_description}}</p>
+                            </div>
                         </div>
-                        <div class="card-overlay bg-gradient-fade"></div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 StatDivMonster d-flex flex-wrap justify-content-center">
-                    <div class="inner">
-                        <table class="table table-borderless" *ngIf="monsterToFight.current_stats">
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <button class="btn rounded-pill font-weight-bold" (click)="calculateMonsterCurrentStats()">Current</button>
-                                    </td>
-                                    <td>
-                                        <button class="btn rounded-pill font-weight-bold" (click)="calculateMonsterMaxStats()">Max</button>
-                                    </td>
-                                    <td>&nbsp;</td>
-                                </tr>
-                                <tr>
-                                <td class="text-right font-weight-bold" style="white-space:nowrap;">HP</td>
-                                    <td colspan="3">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm hp" role="progressbar"
-                                                aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showMonsterStats.hp /  character_max_stats.hp * 100 + '%'}">
-                                                <span>{{showMonsterStats.hp}}</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right font-weight-bold" style="white-space:nowrap;">STR</td>
-                                    <td colspan="3">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm str" role="progressbar"
-                                                aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showMonsterStats.str / character_max_stats.str * 100 + '%'}">
-                                                <span>{{showMonsterStats.str}}</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right font-weight-bold" style="white-space:nowrap;">DEX</td>
-                                    <td colspan="3">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm dex" role="progressbar"
-                                                aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showMonsterStats.dex / character_max_stats.dex * 100 + '%'}">
-                                                <span>{{showMonsterStats.dex}}</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right font-weight-bold" style="white-space:nowrap;">AGI</td>
-                                    <td colspan="3">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm agi" role="progressbar"
-                                                aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showMonsterStats.agi / character_max_stats.agi * 100 + '%'}">
-                                                <span>{{showMonsterStats.agi}}</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    </tr>
-                                <tr>
-                                    <td class="text-right font-weight-bold" style="white-space:nowrap;">Luck</td>
-                                    <td colspan="3">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm luk" role="progressbar"
-                                                aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showMonsterStats.luk / character_max_stats.luk * 100 + '%'}">
-                                                <span>{{showMonsterStats.luk}}</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
 
-                                <tr>
-                                    <td class="text-right font-weight-bold" style="white-space:nowrap;">Total</td>
-                                    <td colspan="3">
-                                        {{showMonsterStats.hp + showMonsterStats.str + showMonsterStats.dex + showMonsterStats.agi + showMonsterStats.luk}}
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-</div>
-
-
-
-<!-- <div class="container-fluid">
-    <div class="col-12 fadeIn MainDiv">
-        <div class="row align-items-center" *ngIf="selectedCharacter">
-            <div class="col-5">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 statDivChar d-flex flex-wrap justify-content-center">
-                        <div class="inner">
-                            <table class="table table-borderless" *ngIf="selectedCharacter.current_stats">
+                        <div class="back">
+                            <table class="table table-borderless" *ngIf="monsterToFight.current_stats">
                                 <tbody>
                                     <tr>
                                         <td></td>
                                         <td>
-                                            <button class="btn rounded-pill font-weight-bold">Stats</button>
+                                            <button class="btn rounded-pill font-weight-bold color-white" (click)="calculateCharacterCurrentStats()">Current</button>
                                         </td>
+                                        <td>
+                                            <button class="btn rounded-pill font-weight-bold color-white" (click)="calculateCharacterMaxStats()">Max</button>
+                                        </td>
+                                        <td>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                    <td class="text-right font-weight-bold" style="white-space:nowrap;">HP</td>
+                                    <td class="text-right font-weight-bold color-white color-white" style="white-space:nowrap;">HP</td>
                                         <td colspan="3">
                                             <div class="progress">
                                                 <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm hp" role="progressbar"
-                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': selectedCharacter.current_stats.hp / selectedCharacter.character_max_stats.hp * 100 + '%'}">
-                                                    <span>{{selectedCharacter.current_stats.hp}}</span>
+                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showMonsterStats.hp /  character_max_stats.hp * 100 + '%'}">
+                                                    <span>{{showMonsterStats.hp}}</span>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="text-right font-weight-bold" style="white-space:nowrap;">STR</td>
+                                        <td class="text-right font-weight-bold color-white" style="white-space:nowrap;">STR</td>
                                         <td colspan="3">
                                             <div class="progress">
                                                 <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm str" role="progressbar"
-                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': selectedCharacter.current_stats.str / selectedCharacter.character_max_stats.str * 100 + '%'}">
-                                                    <span>{{selectedCharacter.current_stats.str}}</span>
+                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showMonsterStats.str / character_max_stats.str * 100 + '%'}">
+                                                    <span>{{showMonsterStats.str}}</span>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="text-right font-weight-bold" style="white-space:nowrap;">DEX</td>
+                                        <td class="text-right font-weight-bold color-white" style="white-space:nowrap;">DEX</td>
                                         <td colspan="3">
                                             <div class="progress">
                                                 <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm dex" role="progressbar"
-                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': selectedCharacter.current_stats.dex / selectedCharacter.character_max_stats.dex * 100 + '%'}">
-                                                    <span>{{selectedCharacter.current_stats.dex}}</span>
+                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showMonsterStats.dex / character_max_stats.dex * 100 + '%'}">
+                                                    <span>{{showMonsterStats.dex}}</span>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="text-right font-weight-bold" style="white-space:nowrap;">AGI</td>
+                                        <td class="text-right font-weight-bold color-white" style="white-space:nowrap;">AGI</td>
                                         <td colspan="3">
                                             <div class="progress">
-                                                <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm" role="progressbar"
-                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': selectedCharacter.current_stats.agi / selectedCharacter.character_max_stats.agi * 100 + '%'}">
-                                                    <span>{{selectedCharacter.current_stats.agi}}</span>
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm agi" role="progressbar"
+                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showMonsterStats.agi / character_max_stats.agi * 100 + '%'}">
+                                                    <span>{{showMonsterStats.agi}}</span>
                                                 </div>
                                             </div>
                                         </td>
                                         </tr>
                                     <tr>
-                                        <td class="text-right font-weight-bold" style="white-space:nowrap;">Luck</td>
+                                        <td class="text-right font-weight-bold color-white" style="white-space:nowrap;">Luck</td>
                                         <td colspan="3">
                                             <div class="progress">
-                                                <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm" role="progressbar"
-                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': selectedCharacter.current_stats.luk / selectedCharacter.character_max_stats.luk * 100 + '%'}">
-                                                    <span>{{selectedCharacter.current_stats.luk}}</span>
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm luk" role="progressbar"
+                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="255" [ngStyle]="{'width': showMonsterStats.luk / character_max_stats.luk * 100 + '%'}">
+                                                    <span>{{showMonsterStats.luk}}</span>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td class="text-right font-weight-bold" style="white-space:nowrap;">Total</td>
+                                        <td class="text-right font-weight-bold color-white" style="white-space:nowrap;">Total</td>
                                         <td colspan="3">
+                                            {{showMonsterStats.hp + showMonsterStats.str + showMonsterStats.dex + showMonsterStats.agi + showMonsterStats.luk}}
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                    </div>
 
-                    <div class="col-6">
-                        <div class="card card-style preload-img" [style.background-image]="'url('+selectedCharacter.image+')'" style="height: 55vh;">
-                            <div class="card-bottom ml-3">
-                                <h1 class="font-40 line-height-xl pb-2">{{selectedCharacter.name}}</h1>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ex mi, porttitor id nisi vel neque.
-                                </p>
-                            </div>
-                            <div class="card-overlay bg-gradient-fade"></div>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div> -->
+</div>
+
+

@@ -17,9 +17,9 @@ export class GameComponent implements OnInit {
     selectedCharacter: Character = new Character();
     selectedCharacterSubscription;
 
-
     totalCurrentStats: number = 0;
 
+    characterShowStats: Boolean = false;
     showCharacterStats = {};
     character_max_stats = {};
 
@@ -33,6 +33,7 @@ export class GameComponent implements OnInit {
     noOfLoadedProductsSubscription
     monsterToFight: Monster;
 
+    monsterShowStats: Boolean = false;
     showMonsterStats = {};
     monster_max_stats = {};
 
@@ -162,6 +163,20 @@ export class GameComponent implements OnInit {
     calculateCharacterMaxStats() {
         let char = this.selectedCharacter;
         this.showCharacterStats = char.max_stats;
+    }
+
+
+    showCardStats(type: string) {
+        console.log(type);
+        switch(type) {
+            case 'character':
+                this.showCharacterStats = !this.showCharacterStats;
+                console.log(this.showCharacterStats);
+                break;
+            case 'monster':
+                this.showMonsterStats = !this.showMonsterStats;
+                break;
+        }
     }
 
 

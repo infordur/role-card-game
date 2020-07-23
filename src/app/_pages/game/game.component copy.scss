@@ -1,17 +1,7 @@
 @import "../../../styles.scss";
 
 
-// .cardita {
-//     display: grid;
-//     perspective: 700px;
-
-//     // &:hover .game-card-container {
-//     //     transform: rotateY(180deg);
-//     // }
-// }
-
-
-/* Flip Cards CSS */
+// Game Card
 .game-card-container {
     border: 1px solid black;
     border-radius: 25px;
@@ -19,14 +9,11 @@
 
     display: grid;
     perspective: 700px;
-    grid-template: 1fr / 1fr;
-    grid-template-areas: "frontAndBack";
-    transform-style: preserve-3d;
-    transition: all 0.7s ease;
 
-    &.card-active {
+    &:hover .card-frame {
         transform: rotateY(180deg);
     }
+
 
     .game-card-border {
         box-shadow: 0 0 0 2px #171314, 0 0 0 5px #d9c28c, -3px 3px 2px 5px #171314;
@@ -36,14 +23,12 @@
         background-color: #171314;
     }
 
-    div {
-        backface-visibility: hidden;
-        transform-style: preserve-3d;
-    }
-
     .card-frame {
-
         display: grid;
+        grid-template: 1fr / 1fr;
+        grid-template-areas: "frontAndBack";
+        transform-style: preserve-3d;
+        transition: all 0.7s ease;
 
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
@@ -61,6 +46,11 @@
             background-color: #fff;
         }
 
+        div {
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+        }
+
         .front {
             grid-area: frontAndBack;
         }
@@ -76,60 +66,6 @@
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Game Card
-// .game-card-container {
-//     border: 1px solid black;
-//     border-radius: 25px;
-//     background-color: #171314;
-
-//     .game-card-border {
-//         box-shadow: 0 0 0 2px #171314, 0 0 0 5px #d9c28c, -3px 3px 2px 5px #171314;
-//     }
-
-//     .card-frame {
-//         border-top-left-radius: 6px;
-//         border-top-right-radius: 6px;
-//         border-bottom-left-radius: 8%;
-//         border-bottom-right-radius: 8%;
-
-//         .game-card-header {
-//             border: 2px solid #000;
-//             border-radius: 18px/40px;
-//             background-color: #C9D8D1;
-//         }
-
-//         .game-card-image {
-//             background-size: cover;
-//             background-color: #fff;
-//         }
-
-//         .description {
-//             background-color:#C9D8D1;
-//         }
-
-//     }
-
-// }
 
 
 
